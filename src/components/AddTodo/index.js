@@ -14,7 +14,7 @@ function AddTodo() {
       return;
     }
 
-    fetch('http://localhost:3000/todos', {
+    fetch('https://todo-backend-c987.onrender.com/todos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,13 +27,10 @@ function AddTodo() {
         throw new Error('Failed to add todo');
       }
       // Fetch updated list of todos
-      return fetch('http://localhost:3000/todos');
+      return fetch('https://todo-backend-c987.onrender.com/todos');
     })
     .then((response) => response.json())
     .then((data) => {
-      // No need to redirect, but update state with new list of todos
-      // This will trigger a re-render and display the updated list
-      // You may want to clear the input fields here as well
       setTitle('');
       setDescription('');
     })

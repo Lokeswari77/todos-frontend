@@ -8,7 +8,7 @@ function UpdateTodo() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3000/todos/${id}`)
+    fetch(`https://todo-backend-c987.onrender.com/todos/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setTitle(data.title);
@@ -25,11 +25,19 @@ function UpdateTodo() {
       },
       body: JSON.stringify({ title, description }),
     })
-    .then(() => {
-      // No need to redirect
+    .then(response => {
+      if (response.ok) {
+        // If the update was successful, update the state with the new todo details
+        setTitle(title);
+        setDescription(description);
+      } else {
+        throw new Error('Failed to update todo');
+      }
     })
     .catch((error) => console.error('Error updating todo:', error));
   };
+  
+  
 
   return (
     <div className="update-todo-container">

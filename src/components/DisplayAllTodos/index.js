@@ -7,7 +7,7 @@ function DisplayAllTodos() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/todos')
+    fetch('https://todo-backend-c987.onrender.com/todos')
       .then((response) => response.json())
       .then((data) => setTodos(data))
       .catch((error) => console.error('Error fetching todos:', error));

@@ -7,7 +7,7 @@ function DeleteTodo() {
   const [error, setError] = useState(null);
 
   const handleDelete = () => {
-    fetch(`http://localhost:3000/todos/${id}`, {
+    fetch(`https://todo-backend-c987.onrender.com/todos/${id}`, {
       method: 'DELETE'
     })
     .then((response) => {
