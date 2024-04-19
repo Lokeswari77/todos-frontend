@@ -1,0 +1,74 @@
+.bg-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .todo-items-heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .todo-item-container {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 15px;
+    list-style-type: none;
+  }
+  
+  .todo-details {
+    margin-bottom: 10px;
+  }
+  
+  .todo-title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .todo-description {
+    color: #666;
+  }
+  
+  .todo-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .delete-icon,
+.edit-icon {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #666;
+  text-decoration: none;
+  background-color: transparent; 
+}
+
+.delete-icon:hover,
+.edit-icon:hover {
+  color: #333;
+}
+
+  .add-task-button {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 20px auto 0;
+    width: 100px;
+  }
+  
+  .add-task-button:hover {
+    background-color: #0056b3;
+  }
+  
